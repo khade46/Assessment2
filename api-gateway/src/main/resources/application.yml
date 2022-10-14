@@ -14,10 +14,10 @@ spring:
         -   id: user-service
             uri: lb://user-service
             predicates:
-              - Path=/**
+              - Path=/user/** , /secure/**
 
         -   id: order-service
             uri: lb://order-service
             predicates:
-              - Path=/**
+              - Path=/items/** , /order/**
 
